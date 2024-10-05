@@ -30,7 +30,31 @@ Capture the waveform output and include the results in your report for verificat
 
 ## Verilog Code:
 
-// swap_three_numbers.v module swap_three_numbers ( input wire [7:0] a_in, input wire [7:0] b_in, input wire [7:0] c_in, output reg [7:0] a_out, output reg [7:0] b_out, output reg [7:0] c_out ); always @(*) begin a_out = b_in; // Swap: a = b b_out = c_in; // Swap: b = c c_out = a_in; // Swap: c = a end endmodule
+       // swap_three_numbers.v
+
+       module swap_three_numbers ( input wire [7:0] a_in,
+       
+      input wire [7:0] b_in,
+      
+    input wire [7:0] c_in, 
+    
+      output reg [7:0] a_out,
+
+       output reg [7:0] b_out,
+
+       output reg [7:0] c_out ); 
+
+    always @(*) begin a_out = b_in;
+
+       // Swap: a = b b_out = c_in;
+
+     // Swap: b = c c_out = a_in; 
+
+     // Swap: c = a 
+
+    end 
+
+      endmodule
 
     
 
@@ -50,25 +74,25 @@ Capture the waveform output and include the results in your report for verificat
 
 ## Testbench for Swapping Three Numbers:
 
-// Inputs
+     // Inputs
 
-reg [7:0] a;
+       reg [7:0] a;
 
-reg [7:0] b;
+      reg [7:0] b;
 
-reg [7:0] c;
+      reg [7:0] c;
 
-// Outputs
+      // Outputs
 
-wire [7:0] a_out;
+     wire [7:0] a_out;
 
-wire [7:0] b_out;
+        wire [7:0] b_out;
 
-wire [7:0] c_out;
+          wire [7:0] c_out;
 
-// Instantiate the Unit Under Test (UUT)
+        // Instantiate the Unit Under Test (UUT)
 
-swap_three_numbers uut (
+     swap_three_numbers uut (
 
     .a_in(a),
     
@@ -82,11 +106,11 @@ swap_three_numbers uut (
     
     .c_out(c_out)
     
-);
+      );
+ 
+      // Test procedure
 
-// Test procedure
-
-initial begin
+         initial begin
 
     // Initialize inputs
     
@@ -113,7 +137,7 @@ initial begin
     
     #10 $stop;
     
-end
+     end
 
     
 
