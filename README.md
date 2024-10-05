@@ -1,11 +1,11 @@
 # Verilog-Code-for-Swapping-Three-Numbers
-Aim
+## Aim
 To design and simulate a Verilog HDL code for swapping the values of three numbers without using any temporary variables, and verify the correctness of the swapping operation through a testbench using the Vivado 2023.1 simulation environment.
 
-Apparatus Required
+## Apparatus Required
 Vivado 2023.1 or equivalent Verilog simulation tool.
 
-Procedure
+## Procedure
 Launch Vivado 2023.1:
 
 Open Vivado and create a new project.
@@ -28,26 +28,48 @@ Save and Document Results:
 
 Capture the waveform output and include the results in your report for verification.
 
-Verilog Code:
+## Verilog Code:
+
 
 // swap_three_numbers.v
 module swap_three_numbers (
+
     input wire [7:0] a_in,
+    
     input wire [7:0] b_in,
-    input wire [7:0] c_in,
+    
+    input wire
+    
+    [7:0] c_in,
+    
     output reg [7:0] a_out,
+    
     output reg [7:0] b_out,
+    
     output reg [7:0] c_out
 );
+
     always @(*) begin
+    
         a_out = b_in; // Swap: a = b
+        
         b_out = c_in; // Swap: b = c
+        
         c_out = a_in; // Swap: c = a
+        
     end
+    
 endmodule
 
+## output
 
-Testbench for Swapping Three Numbers:
+![image](https://github.com/user-attachments/assets/4fdddd8c-017e-4627-8654-fa9e46a1e988)
+
+
+
+
+## Testbench for Swapping Three Numbers:
+
 
 // swap_three_numbers_tb.v
 `timescale 1ns / 1ps
@@ -94,5 +116,11 @@ module swap_three_numbers_tb;
     end
 endmodule
 
-Conclusion
+## output
+
+![image](https://github.com/user-attachments/assets/427a13da-f0d5-441c-a8f8-ea9b43021f02)
+
+
+## Conclusion
+
 In this experiment, a Verilog HDL code for swapping three numbers was designed and successfully simulated. The testbench verified the swapping operation, showing that the values of three input numbers (a, b, and c) were swapped correctly without the use of temporary variables. This experiment demonstrated the effectiveness of Verilog in implementing logical operations and control mechanisms such as swapping values. The simulation results confirm the correct functionality of the design.
